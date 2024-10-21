@@ -10,5 +10,5 @@ Create folder in vs-code and within this folder run:
 Now we have a react-project structure created.
 
 ## Libraries used:
-* Styled-compnents
+* Styled-components
 * Material-UI
