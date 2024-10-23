@@ -8,7 +8,7 @@ const TopSidebarMenu: React.FC<Props> = ({
         <div className="top-sidebar-menu">
             {console.log(profile)}
             <img src={profile.profilePicturePath} alt={`${profile.name}'s profile`} className="sidebar-image" /> {/* Use the imported image */}
-            <p>{profile.name}</p>
+            <h4>{profile.name}</h4>
         </div>
     );
 };

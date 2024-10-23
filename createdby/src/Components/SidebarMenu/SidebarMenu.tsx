@@ -3,7 +3,7 @@ import React from 'react';
 import './SidebarMenu.css';
 import TopSidebarMenu from './TopSidebarMenu.tsx';
 
-const SidebarMenu: React.FC<Props> = ({
+const SidebarMenu = ({
     profile,
 }) => {
     return (

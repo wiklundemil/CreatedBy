@@ -8,10 +8,10 @@
 
   "profile": 
     {
-      "name": "[Name]",
-      "bio": "[Bio]",
-      "age": "[Age]",
-      "location": "[Location]",
-      "profilePicturePath": "/Images/profilepictPlaceHolder.jpg"
+      "name": "Eric Myrström",
+      "bio": "A passionate software developer with a love for coding and problem-solving. Enjoys contributing to open-source projects and exploring new technologies.",
+      "age": "28",
+      "location": "Stockholm, Sweden",
+      "profilePicturePath": "/Images/profilePictureEric.png"
     }
 }

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Grid } from '@mui/material';
 
-import { CatalogueObject } from './Components/Grid/Models/gridModels.ts';
+import { CatalogueObject } from './Components/CatalogueGrid/Models/gridModels.ts';
 import { Profile } from './Components/SidebarMenu/Models/SidebarMenuModels.ts';
 
-import CatalogueGrid from './Components/Grid/CatalogueGrid.tsx';
+import CatalogueGrid from './Components/CatalogueGrid/CatalogueGrid.tsx';
 import SidebarMenu from './Components/SidebarMenu/SidebarMenu.tsx';
 import './Components/SidebarMenu/SidebarMenu.css';
 
@@ -47,11 +47,7 @@ const Root: React.FC<{
   return (
     <Grid container style={{ height: '100vh' }}>
       <Grid item xs={2} style={{ backgroundColor: 'lightgray' }}>
-        <SidebarMenu
-          profile = {profile}
-        >
-
-        </SidebarMenu>
+        <SidebarMenu profile = {profile}></SidebarMenu>
       </Grid>
       <Grid item xs={10} style={{ padding: '20px'}}>
         <CatalogueGrid catalogueObjects={catalogueObjects} />
