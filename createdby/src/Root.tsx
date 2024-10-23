@@ -5,6 +5,7 @@ import { CatalogueObject } from './Models/gridModels.ts';
 
 import CatalogueGrid from './Components/Grid/CatalogueGrid.tsx';
 import SidebarMenu from './Components/SidebarMenu/SidebarMenu.tsx';
+import './Components/SidebarMenu/SidebarMenu.css';
 
 import data from './Data/data.json';
 
