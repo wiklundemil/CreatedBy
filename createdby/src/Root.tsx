@@ -6,6 +6,7 @@ import { Profile } from './Components/SidebarMenu/Models/SidebarMenuModels.ts';
 
 import CatalogueGrid from './Components/CatalogueGrid/CatalogueGrid.tsx';
 import SidebarMenu from './Components/SidebarMenu/SidebarMenu.tsx';
+import ProjectDetails from './Components/Project/ProjectDetail.tsx';
 import './Components/SidebarMenu/SidebarMenu.css';
 
 import data from './Data/data.json';
@@ -15,7 +16,8 @@ const Root: React.FC<{
 }> = () => {
   const [profile, setProfile] = useState<Profile>('');
   const [catalogueObjects, setCatalogueObjects] = useState<CatalogueObject>('');
- 
+  const [selectedProject, setSelectedProject] = useState<CatalogueObject | null>(null);
+
   const getDataFromFile: any = async () => {
     try {
   
@@ -50,7 +52,17 @@ const Root: React.FC<{
         <SidebarMenu profile = {profile}></SidebarMenu>
       </Grid>
       <Grid item xs={10} style={{ padding: '20px'}}>
-        <CatalogueGrid catalogueObjects={catalogueObjects} />
+        {selectedProject ? ( // Check if a project is selected
+          <ProjectDetails 
+            project={selectedProject} 
+            onBack={() => setSelectedProject(null)} 
+            />
+        ) : (
+          <CatalogueGrid
+            catalogueObjects={catalogueObjects}
+            onItemClick={(project) => setSelectedProject(project)}
+          />
+        )}
       </Grid>
     </Grid>
   );

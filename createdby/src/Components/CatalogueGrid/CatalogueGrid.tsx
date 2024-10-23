@@ -5,14 +5,19 @@ import Banner from '../Banner/Banner.tsx';
 
 interface Props {
     catalogueObjects: CatalogueObject[];
+    onItemClick: (item: CatalogueObject) => void;
+
 }
 
 const CatalogueGrid: React.FC<Props> = ({
-    catalogueObjects,
+    catalogueObjects, onItemClick,
 }) => {
-    const objects = Array.from({ length: catalogueObjects.length }, (_, index) => (
+    const objects = catalogueObjects.map((item, index) => (
         <Grid item xs={2} sm={4} md={4} key={index}>
-            <CatalogueItem title={catalogueObjects[index].title} />
+            <CatalogueItem
+                title={item.title}
+                onClick={() => onItemClick(item)} // Trigger the callback when clicked
+            />
         </Grid>
     ));
 
