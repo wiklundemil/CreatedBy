@@ -1,5 +1,5 @@
 import CatalogueItem from './CatalogueItem.tsx';
-import { CatalogueObject } from '../Models/gridModels.ts';
+import { CatalogueObject } from './Models/gridModels.ts';
 import { Grid } from '@mui/material';
 
 interface Props {

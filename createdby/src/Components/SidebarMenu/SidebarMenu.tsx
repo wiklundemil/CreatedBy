@@ -3,11 +3,15 @@ import React from 'react';
 import './SidebarMenu.css';
 import TopSidebarMenu from './TopSidebarMenu.tsx';
 
-
-const SidebarMenu = () => {
+const SidebarMenu: React.FC<Props> = ({
+    profile,
+}) => {
     return (
         <div className="sidebar-menu">
-            <TopSidebarMenu></TopSidebarMenu>
+            <TopSidebarMenu
+                profile = {profile}
+            >
+            </TopSidebarMenu>
 
             <p>Menu Item 1</p>
             <p>Menu Item 2</p>

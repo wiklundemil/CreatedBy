@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react';
 import { Grid } from '@mui/material';
 
-import { CatalogueObject } from './Models/gridModels.ts';
+import { CatalogueObject } from './Components/Grid/Models/gridModels.ts';
+import { Profile } from './Components/SidebarMenu/Models/SidebarMenuModels.ts';
 
 import CatalogueGrid from './Components/Grid/CatalogueGrid.tsx';
 import SidebarMenu from './Components/SidebarMenu/SidebarMenu.tsx';
 import './Components/SidebarMenu/SidebarMenu.css';
 
 import data from './Data/data.json';
+import manifest from './manifest.json'
 
 const Root: React.FC<{
 }> = () => {
+  const [profile, setProfile] = useState<Profile>('');
   const [catalogueObjects, setCatalogueObjects] = useState<CatalogueObject>('');
  
   const getDataFromFile: any = async () => {
@@ -24,7 +27,19 @@ const Root: React.FC<{
     }
   };
   
+  const getProfileData: any = async () => {
+    try {
+  
+      const profile: Profile[] = JSON.parse(JSON.stringify(manifest.profile));
+      
+      setProfile(profile);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  
   useEffect(() => {
+    getProfileData();
     getDataFromFile();
   }, []); //If the variable inside this dependency array changes then we update. Else if left empty run once.
 
@@ -32,7 +47,11 @@ const Root: React.FC<{
   return (
     <Grid container style={{ height: '100vh' }}>
       <Grid item xs={2} style={{ backgroundColor: 'lightgray' }}>
-        <SidebarMenu></SidebarMenu>
+        <SidebarMenu
+          profile = {profile}
+        >
+
+        </SidebarMenu>
       </Grid>
       <Grid item xs={10} style={{ padding: '20px'}}>
         <CatalogueGrid catalogueObjects={catalogueObjects} />
