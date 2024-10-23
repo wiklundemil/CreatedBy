@@ -13,4 +13,5 @@ Now we have a react-project structure created. To run the project and get it run
 * Styled-components
 * Material-UI
 
-## How one change their own _base-information_, one can do this within the projects manifest file. This file contain a json-object called profile which can be populated with infromation connected to the user. This _base-information_ will automaticly end up everywhere this _base-information_ is used. 
+## Change _base-information_ about user:
+How one change their own _base-information_, one can do this within the projects manifest file. This file contain a json-object called profile which can be populated with infromation connected to the user. This _base-information_ will automaticly end up everywhere this _base-information_ is used. 
