@@ -1,0 +1,16 @@
+/* CustomOption.css */
+.custom-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px; /* Set a height to ensure vertical alignment */
+  background-color: #f0f0f0;
+  cursor: pointer;
+  padding: 20px 0; /* Padding can be adjusted as needed */
+  transition: background-color 0.3s;
+}
+
+.custom-option:hover {
+  background-color: #e0e0e0;
+}

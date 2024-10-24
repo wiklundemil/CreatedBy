@@ -1,0 +1,8 @@
+[
+    { "id": 1, "label": "Dashboard" },
+    { "id": 2, "label": "Profile" },
+    { "id": 3, "label": "Settings" },
+    { "id": 4, "label": "Notifications" },
+    { "id": 5, "label": "Logout" }
+]
+  
