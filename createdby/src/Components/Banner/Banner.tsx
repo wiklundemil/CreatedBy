@@ -7,7 +7,7 @@ const Banner = ({
 }) => {
     return (
         <div className="banner">
-           <p>Here are all my projects!</p>
+           Here are all my projects!
         </div>
     );
 };

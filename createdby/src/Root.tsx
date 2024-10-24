@@ -8,6 +8,7 @@ import CatalogueGrid from './Components/CatalogueGrid/CatalogueGrid.tsx';
 import SidebarMenu from './Components/SidebarMenu/SidebarMenu.tsx';
 import ProjectDetails from './Components/Project/ProjectDetail.tsx';
 import './Components/SidebarMenu/SidebarMenu.css';
+import './Components/SidebarMenu/SidebarMenu.css';
 
 import data from './Data/data.json';
 import option from './Data/Options.json';
@@ -43,10 +44,10 @@ const Root: React.FC<{
     
   return (
     <Grid container style={{ height: '100vh', padding: 0, margin: 0 }}>
-      <Grid item xs={2} style={{ backgroundColor: 'lightgray' }}>
+      <Grid item xs={2}>
         <Paper elevation={5} ><SidebarMenu options = {options} profile = {profile}></SidebarMenu></Paper>
       </Grid>
-      <Grid item xs={10} style={{ padding: '20px'}}>
+      <Grid item xs={10}>
         {selectedProject ? ( // Check if a project is selected
           <ProjectDetails 
             project={selectedProject} 

@@ -3,14 +3,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   height: 50px; /* Set a height to ensure vertical alignment */
-  background-color: #f0f0f0;
+  background-color: var(--color-fourth);
   cursor: pointer;
-  padding: 20px 0; /* Padding can be adjusted as needed */
-  transition: background-color 0.3s;
+  margin-top: 10px;
+  padding: 15px 0; /* Padding can be adjusted as needed */
+  transition: width 0.3s, background-color 0.3s; /* Added width transition */
 }
 
 .custom-option:hover {
   background-color: #e0e0e0;
+  width: 98%; /* Increase the width on hover */
 }

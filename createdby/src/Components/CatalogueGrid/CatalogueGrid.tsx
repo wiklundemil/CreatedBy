@@ -29,7 +29,7 @@ const CatalogueGrid: React.FC<Props> = ({
 
     return (
         <Grid container spacing={{ xs: 1, md: 2 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            <Grid item xs={12} style={{ marginBottom: '20px' }}>
+            <Grid item xs={12} style={{ marginBottom: '20px'}}>
                 <Banner />
             </Grid>
             {objects}
