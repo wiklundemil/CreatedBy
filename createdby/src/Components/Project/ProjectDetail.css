@@ -1,0 +1,37 @@
+.project-details {
+    background-color: var(--color-fourth) !important;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 85%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.back-button.MuiButton-contained {
+    background-color: var(--color-main) !important;
+    color: white !important;
+    margin-bottom: 16px;
+}
+
+.project-content {
+    margin-top: 16px;
+    color: white;
+}
+
+.rubric {
+    margin-bottom: 8px;
+    color: white;
+}
+
+.description {
+    margin-bottom: 24px;
+    color: white;
+}
+
+.main-content-box {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    padding: 24px;
+    border-radius: 4px;
+    color: white;
+}

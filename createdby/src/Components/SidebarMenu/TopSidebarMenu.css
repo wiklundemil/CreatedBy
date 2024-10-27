@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 .sidebar-image {
@@ -20,4 +21,9 @@ h4{
     margin:0;
     padding:15px;
     text-decoration: underline;
+    color: white;
+}
+
+.repo-count {
+    color: white;
 }
